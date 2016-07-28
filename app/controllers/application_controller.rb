@@ -19,11 +19,4 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
-  
-  def require_same_user
-    if !logged_in? || !current_user
-      flash[:danger] = "You must be logged in as the owner to perform this action"
-      redirect_to root_path
-    end
-  end
 end

@@ -6,6 +6,11 @@
   </div>
 </div>
 <h4 align="center"><%= @user.username %>'s articles</h4>
+<div class="center meta-details">
+    <small>Joined <%= time_ago_in_words(@user.created_at) %> ago,
+                  account last updated: <%= time_ago_in_words(@user.updated_at) %> ago
+    </small>
+</div>
 <div class="center">
   <%= will_paginate @user_articles %>
 </div>
