@@ -37,15 +37,10 @@
             aria-expanded="false">Categories<span class="caret"></span></a>
             <ul class="dropdown-menu">
                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>-->
-              <li class="dropdown-toggle" data-toggle="dropdown" ><%= link_to "All categories", categories_path %>
-                
+              <li><%= link_to "All categories", categories_path %></li>
                   <% Category.all.each do |category| %>
                     <li><%= link_to "#{category.name}", category_path(category) %></li>
                   <% end %>
-                
-              </li>
-              
-              
               <% if logged_in? and current_user.admin? %>
                 <li role="separator" class="divider"></li>
                 <li><%= link_to 'New Category', new_category_path %></li>
