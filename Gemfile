@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+#Use Commontator for comment in article
+gem 'commontator', '~> 4.11', '>= 4.11.1'
 
 # Use for pagination
 gem 'will_paginate', '~> 3.0.7'
